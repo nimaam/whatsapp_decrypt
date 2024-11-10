@@ -9,6 +9,7 @@ services:
     environment:
       API_TOKEN: ${API_TOKEN}
     restart: unless-stopped
+    command: sleep infinity
     networks: 
       nginx-proxy-network:
 
