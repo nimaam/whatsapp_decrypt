@@ -1,0 +1,10 @@
+curl -X POST http://localhost:8080/decrypt_media \
+     -H "Authorization: Bearer your_api_token" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "url": "https://mmg.whatsapp.net/d/f/AjG...",
+           "mimetype": "image/jpeg",
+           "fileLength": "1234567",
+           "fileEncSha256": "base64encodedhash",
+           "mediaKey": "base64encodedkey"
+         }' --output decrypted_file.jpg
