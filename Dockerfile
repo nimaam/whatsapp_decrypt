@@ -17,4 +17,4 @@ EXPOSE 8080
 ENV FLASK_APP=decrypt_media.py
 
 # Run the application
-CMD ["python", "decrypt_media.py"]
+#CMD ["python", "decrypt_media.py"]
