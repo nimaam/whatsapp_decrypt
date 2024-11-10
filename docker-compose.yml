@@ -1,0 +1,11 @@
+version: '3'
+services:
+  decryptor:
+    build: .
+    container_name: decrypt_media_service
+    ports:
+      - "8080:8080"
+    environment:
+      API_TOKEN: ${API_TOKEN}
+    restart: unless-stopped
+    networks: nginx-proxy-network
