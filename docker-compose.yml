@@ -1,11 +1,13 @@
-version: '3'
 services:
   decryptor:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: decrypt_media_service
-    ports:
-      - "8080:8080"
+    #ports:
+    #  - "8080:8080"
     environment:
       API_TOKEN: ${API_TOKEN}
     restart: unless-stopped
-    networks: nginx-proxy-network
+    networks: 
+      nginx-proxy-network:
